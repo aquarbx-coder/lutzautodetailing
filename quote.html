@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Free Quote | Lutz Auto Detailing</title>
+  <meta name="description" content="Get a free, no-obligation quote for mobile car detailing in Lutz, FL. Tell us about your vehicle and we'll provide a custom estimate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <span class="logo-text">LUTZ<span class="logo-accent">AUTO</span></span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html#services" class="nav__link">Services</a></li>
+          <li><a href="index.html#why-us" class="nav__link">Why Us</a></li>
+          <li><a href="index.html#about" class="nav__link">About</a></li>
+          <li><a href="index.html#gallery" class="nav__link">Gallery</a></li>
+          <li><a href="index.html#reviews" class="nav__link">Reviews</a></li>
+          <li><a href="index.html#faq" class="nav__link">FAQ</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="quote.html" class="btn btn--outline btn--sm">Get a Quote</a>
+        <a href="booking.html" class="btn btn--primary btn--sm">Book Now</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-header__title">Get a Free Quote</h1>
+      <p class="page-header__subtitle">Not ready to book? No problem. Tell us about your vehicle and we'll send you a custom estimate.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUOTE FORM ============ -->
+  <section class="section">
+    <div class="container">
+      <form class="quote-form" id="quoteForm" action="#" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="qName">Your Name</label>
+            <input type="text" class="form-input" id="qName" name="name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="qPhone">Phone Number</label>
+            <input type="tel" class="form-input" id="qPhone" name="phone" placeholder="(813) 555-0000" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="qEmail">Email</label>
+          <input type="email" class="form-input" id="qEmail" name="email" placeholder="you@email.com" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="qVehicle">Vehicle Make &amp; Model</label>
+            <input type="text" class="form-input" id="qVehicle" name="vehicle" placeholder="e.g. Honda CR-V 2022">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="qVehicleType">Vehicle Type</label>
+            <select class="form-select" id="qVehicleType" name="vehicle_type">
+              <option value="" disabled selected>Select type</option>
+              <option value="sedan">Sedan / Coupe</option>
+              <option value="suv">SUV / Crossover</option>
+              <option value="truck">Truck / Van</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="qService">Service Interested In</label>
+          <select class="form-select" id="qService" name="service">
+            <option value="" disabled selected>Select a service</option>
+            <option value="exterior">Basic Exterior — Starting at $79</option>
+            <option value="interior">Interior Detail — Starting at $129</option>
+            <option value="full">Full Detail — Starting at $199</option>
+            <option value="unsure">Not sure yet — need advice</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="qCondition">Vehicle Condition</label>
+          <select class="form-select" id="qCondition" name="condition">
+            <option value="" disabled selected>Select condition</option>
+            <option value="light">Light — Regular upkeep</option>
+            <option value="medium">Medium — Needs a good cleaning</option>
+            <option value="heavy">Heavy — Very dirty / pet hair / stains</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="qPhotos">Upload Photos (optional)</label>
+          <input type="file" class="form-input" id="qPhotos" name="photos" multiple accept="image/*">
+          <p class="form-hint">Photos help us give you a more accurate quote.</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="qMessage">Additional Details</label>
+          <textarea class="form-textarea" id="qMessage" name="message" rows="4" placeholder="Tell us anything else — specific stains, pet hair situation, timeline preferences, etc."></textarea>
+        </div>
+
+        <div style="text-align:center;">
+          <button type="submit" class="btn btn--primary btn--lg">Send Quote Request</button>
+          <p class="form-hint" style="margin-top:12px;">We typically respond within a few hours during business hours.</p>
+        </div>
+      </form>
+
+      <div style="text-align:center; margin-top:32px; padding-top:32px; border-top:1px solid #e8e8e8;">
+        <p style="color: var(--text-light); margin-bottom:12px;">Ready to book instead?</p>
+        <a href="booking.html" class="btn btn--outline btn--md">Book Your Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <span class="logo-text logo-text--footer">LUTZ<span class="logo-accent">AUTO</span></span>
+        <p class="footer__tagline">Professional mobile car detailing in Lutz, FL and surrounding areas.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="booking.html">Book Now</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Service Areas</h4>
+        <ul class="footer__links">
+          <li>Lutz, FL</li>
+          <li>Land O' Lakes</li>
+          <li>Wesley Chapel</li>
+          <li>New Tampa</li>
+          <li>Odessa</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading">Contact</h4>
+        <ul class="footer__links">
+          <li><a href="tel:8135550123">(813) 555-0123</a></li>
+          <li><a href="mailto:info@lutzautodetailing.com">info@lutzautodetailing.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 Lutz Auto Detailing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
