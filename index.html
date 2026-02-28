@@ -17,73 +17,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Local Business Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "AutoDetailingBusiness",
     "name": "Lutz Auto Detailing",
-    "description": "Professional mobile car detailing service in Lutz, Florida. We come to your home or office.",
+    "description": "Professional mobile car detailing service in Lutz, Florida.",
     "url": "https://lutzautodetailing.com",
     "telephone": "(813) 555-0123",
     "email": "info@lutzautodetailing.com",
-    "areaServed": {
-      "@type": "City",
-      "name": "Lutz",
-      "containedInPlace": {
-        "@type": "State",
-        "name": "Florida"
-      }
-    },
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 28.1511,
-        "longitude": -82.4615
-      },
-      "geoRadius": "25"
-    },
-    "priceRange": "$$",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "07:00",
-        "closes": "18:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "08:00",
-        "closes": "16:00"
-      }
-    ]
+    "areaServed": { "@type": "City", "name": "Lutz", "containedInPlace": { "@type": "State", "name": "Florida" } },
+    "priceRange": "$$"
   }
   </script>
 </head>
 <body>
 
-  <!-- ============ NAVIGATION ============ -->
+  <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">
-        <!-- Logo placeholder — replace src with your logo -->
-        <span class="logo-text">LUTZ<span class="logo-accent">AUTO</span></span>
+        <span class="logo-text">LUTZ <span class="logo-accent">AUTO DETAILING</span></span>
       </a>
       <nav class="nav" id="nav">
         <ul class="nav__list">
           <li><a href="#services" class="nav__link">Services</a></li>
           <li><a href="#why-us" class="nav__link">Why Us</a></li>
           <li><a href="#about" class="nav__link">About</a></li>
-          <li><a href="#gallery" class="nav__link">Gallery</a></li>
           <li><a href="#reviews" class="nav__link">Reviews</a></li>
           <li><a href="#faq" class="nav__link">FAQ</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
         </ul>
       </nav>
       <div class="header__actions">
-        <a href="quote.html" class="btn btn--outline btn--sm">Get a Quote</a>
+        <a href="tel:8135550123" class="header__phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (813) 555-0123
+        </a>
         <a href="booking.html" class="btn btn--primary btn--sm">Book Now</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -92,62 +62,77 @@
     </div>
   </header>
 
-  <!-- ============ HERO ============ -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero__bg"></div>
-    <div class="hero__grid-pattern"></div>
-    <div class="hero__floating-orb hero__floating-orb--1"></div>
-    <div class="hero__floating-orb hero__floating-orb--2"></div>
     <div class="container hero__content">
-      <div class="hero__badge">
-        <span class="hero__badge-dot"></span>
-        Now Booking — Lutz &amp; Surrounding Areas
-      </div>
-      <h1 class="hero__title">
-        <span class="hero__title-gradient">Professional Mobile<br>Car Detailing</span><br>in Lutz, FL
-      </h1>
-      <p class="hero__subtitle">We bring the detail shop to your driveway. Spotless results, zero hassle — right at your home or office.</p>
+      <p class="hero__tagline">Mobile Car Detailing in Lutz, FL</p>
+      <h1 class="hero__title">We Come to You.<br>Your Car Leaves Spotless.</h1>
+      <p class="hero__subtitle">Professional detailing at your home or office. No driving, no waiting, no hassle. Just a perfectly clean vehicle in your own driveway.</p>
       <div class="hero__ctas">
-        <a href="booking.html" class="btn btn--primary btn--lg">Book Your Detail</a>
-        <a href="quote.html" class="btn btn--outline-light btn--lg">Get a Free Quote</a>
+        <a href="booking.html" class="btn btn--primary btn--lg">Book an Appointment</a>
+        <a href="tel:8135550123" class="btn btn--outline-light btn--lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (813) 555-0123
+        </a>
       </div>
-      <div class="hero__stats">
-        <div class="hero__stat">
-          <div class="hero__stat-number"><span data-count="500">0</span><span class="counter-suffix">+</span></div>
-          <div class="hero__stat-label">Vehicles Detailed</div>
+      <div class="hero__trust">
+        <div class="hero__trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Fully Insured
         </div>
-        <div class="hero__stat">
-          <div class="hero__stat-number"><span data-count="5">0</span><span class="counter-suffix">.0</span></div>
-          <div class="hero__stat-label">Star Rating</div>
+        <div class="hero__trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          5-Star Rated
         </div>
-        <div class="hero__stat">
-          <div class="hero__stat-number"><span data-count="100">0</span><span class="counter-suffix">%</span></div>
-          <div class="hero__stat-label">Satisfaction</div>
-        </div>
-        <div class="hero__stat">
-          <div class="hero__stat-number"><span data-count="0">0</span><span class="counter-suffix"> mi</span></div>
-          <div class="hero__stat-label">You Drive</div>
+        <div class="hero__trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Serving Lutz &amp; Surrounding Areas
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ SERVICES ============ -->
-  <section class="services section" id="services">
+  <!-- HOW IT WORKS (simple 3-step) -->
+  <section class="how-it-works section">
     <div class="container">
-      <div class="section__header reveal">
-        <div class="section__eyebrow">Our Services</div>
+      <div class="section__header">
+        <h2 class="section__title">How It Works</h2>
+        <p class="section__subtitle">Getting your car detailed is easy. Here's all you need to do:</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3 class="step__title">Book Online or Call</h3>
+          <p class="step__text">Pick your service, choose a date, and give us your address. It takes about 2 minutes.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3 class="step__title">We Come to You</h3>
+          <p class="step__text">We show up at your home or office on time with all the equipment and products we need.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3 class="step__title">Enjoy Your Clean Car</h3>
+          <p class="step__text">Go about your day while we work. We'll let you know when your vehicle is ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section section--light" id="services">
+    <div class="container">
+      <div class="section__header">
         <h2 class="section__title">Our Detailing Packages</h2>
-        <p class="section__subtitle">Choose the package that fits your needs. Every detail done right, every time.</p>
+        <p class="section__subtitle">Clear pricing, no surprises. Choose the package that fits your needs.</p>
       </div>
       <div class="services__grid">
-
-        <!-- Basic Exterior -->
-        <div class="service-card reveal reveal-delay-1">
+        <div class="service-card">
           <div class="service-card__badge">Popular</div>
-          <h3 class="service-card__title">Basic Exterior</h3>
+          <h3 class="service-card__title">Basic Exterior Wash</h3>
           <p class="service-card__price">Starting at <strong>$79</strong></p>
-          <p class="service-card__desc">A thorough hand wash and exterior refresh that leaves your vehicle looking showroom-ready.</p>
+          <p class="service-card__desc">A thorough hand wash and exterior refresh. Your vehicle will look showroom-ready.</p>
           <ul class="service-card__list">
             <li>Hand wash &amp; dry</li>
             <li>Wheel &amp; tire cleaning</li>
@@ -155,40 +140,32 @@
             <li>Window cleaning (exterior)</li>
             <li>Spray wax finish</li>
           </ul>
-          <div class="service-card__time">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            ~1 hour
-          </div>
+          <div class="service-card__time">Approximately 1 hour</div>
           <a href="booking.html?package=exterior" class="btn btn--primary btn--full">Book This Package</a>
         </div>
 
-        <!-- Interior Detail -->
-        <div class="service-card service-card--featured reveal reveal-delay-2">
+        <div class="service-card service-card--featured">
           <div class="service-card__badge service-card__badge--featured">Best Value</div>
           <h3 class="service-card__title">Interior Detail</h3>
           <p class="service-card__price">Starting at <strong>$129</strong></p>
-          <p class="service-card__desc">A deep clean of your vehicle's interior — perfect for daily drivers, families, and pet owners.</p>
+          <p class="service-card__desc">A deep clean of your vehicle's interior. Perfect for families, pet owners, and daily drivers.</p>
           <ul class="service-card__list">
             <li>Full vacuum (seats, carpet, trunk)</li>
-            <li>Dashboard &amp; console wipe-down</li>
+            <li>Dashboard &amp; console cleaning</li>
             <li>Door panel cleaning</li>
             <li>Interior window cleaning</li>
             <li>Air freshener treatment</li>
             <li>Leather conditioning (if applicable)</li>
           </ul>
-          <div class="service-card__time">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            ~1.5–2 hours
-          </div>
+          <div class="service-card__time">Approximately 1.5 &ndash; 2 hours</div>
           <a href="booking.html?package=interior" class="btn btn--primary btn--full">Book This Package</a>
         </div>
 
-        <!-- Full Detail -->
-        <div class="service-card reveal reveal-delay-3">
+        <div class="service-card">
           <div class="service-card__badge">Complete</div>
           <h3 class="service-card__title">Full Detail</h3>
           <p class="service-card__price">Starting at <strong>$199</strong></p>
-          <p class="service-card__desc">The complete treatment — inside and out. Our most thorough package for a like-new finish.</p>
+          <p class="service-card__desc">The complete treatment, inside and out. Our most thorough package for a like-new finish.</p>
           <ul class="service-card__list">
             <li>Everything in Exterior package</li>
             <li>Everything in Interior package</li>
@@ -197,335 +174,212 @@
             <li>Engine bay wipe-down</li>
             <li>Door jamb cleaning</li>
           </ul>
-          <div class="service-card__time">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            ~3–4 hours
-          </div>
+          <div class="service-card__time">Approximately 3 &ndash; 4 hours</div>
           <a href="booking.html?package=full" class="btn btn--primary btn--full">Book This Package</a>
         </div>
       </div>
 
-      <!-- Add-Ons -->
       <div class="addons">
         <h3 class="addons__title">Add-On Services</h3>
         <div class="addons__grid">
-          <div class="addon-item">
-            <span class="addon-item__name">Pet Hair Removal</span>
-            <span class="addon-item__price">+$40</span>
-          </div>
-          <div class="addon-item">
-            <span class="addon-item__name">Stain Extraction</span>
-            <span class="addon-item__price">+$50</span>
-          </div>
-          <div class="addon-item">
-            <span class="addon-item__name">Headlight Restoration</span>
-            <span class="addon-item__price">+$45</span>
-          </div>
-          <div class="addon-item">
-            <span class="addon-item__name">Ceramic Spray Coating</span>
-            <span class="addon-item__price">+$60</span>
-          </div>
-          <div class="addon-item">
-            <span class="addon-item__name">Odor Elimination</span>
-            <span class="addon-item__price">+$35</span>
-          </div>
-          <div class="addon-item">
-            <span class="addon-item__name">Engine Bay Detail</span>
-            <span class="addon-item__price">+$55</span>
-          </div>
+          <div class="addon-item"><span class="addon-item__name">Pet Hair Removal</span><span class="addon-item__price">+$40</span></div>
+          <div class="addon-item"><span class="addon-item__name">Stain Extraction</span><span class="addon-item__price">+$50</span></div>
+          <div class="addon-item"><span class="addon-item__name">Headlight Restoration</span><span class="addon-item__price">+$45</span></div>
+          <div class="addon-item"><span class="addon-item__name">Ceramic Spray Coating</span><span class="addon-item__price">+$60</span></div>
+          <div class="addon-item"><span class="addon-item__name">Odor Elimination</span><span class="addon-item__price">+$35</span></div>
+          <div class="addon-item"><span class="addon-item__name">Engine Bay Detail</span><span class="addon-item__price">+$55</span></div>
         </div>
-        <p class="addons__note">Prices may vary based on vehicle size and condition. SUVs and trucks may have a surcharge.</p>
+        <p class="addons__note">Prices may vary based on vehicle size and condition. SUVs and trucks may have a small surcharge.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ WHY CHOOSE US ============ -->
-  <section class="why-us section section--dark" id="why-us">
+  <!-- WHY CHOOSE US -->
+  <section class="why-us section" id="why-us">
     <div class="container">
-      <div class="section__header reveal">
-        <div class="section__eyebrow">The Difference</div>
-        <h2 class="section__title">Why Choose Lutz Auto Detailing</h2>
-        <p class="section__subtitle">We're not just another car wash. Here's what sets us apart.</p>
+      <div class="section__header">
+        <h2 class="section__title">Why Customers Trust Us</h2>
+        <p class="section__subtitle">We're a local Lutz business built on doing great work and treating people right.</p>
       </div>
       <div class="why-us__grid">
         <div class="why-card">
           <div class="why-card__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <h3 class="why-card__title">We Come to You</h3>
-          <p class="why-card__text">No need to drive anywhere or wait at a shop. We bring professional-grade equipment and products directly to your home or office.</p>
+          <div>
+            <h3 class="why-card__title">We Come to You</h3>
+            <p class="why-card__text">No need to drive anywhere. We bring everything to your home or office and work while you go about your day.</p>
+          </div>
         </div>
         <div class="why-card">
           <div class="why-card__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3 class="why-card__title">Fully Insured</h3>
-          <p class="why-card__text">Your vehicle is in safe hands. We carry full liability insurance so you can relax while we work.</p>
+          <div>
+            <h3 class="why-card__title">Fully Insured</h3>
+            <p class="why-card__text">We carry full liability insurance. Your vehicle is in safe, professional hands.</p>
+          </div>
         </div>
         <div class="why-card">
           <div class="why-card__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <h3 class="why-card__title">Reliable &amp; On Time</h3>
-          <p class="why-card__text">We show up when we say we will. You'll get a confirmation, a reminder, and a heads-up when we're on the way.</p>
+          <div>
+            <h3 class="why-card__title">Always On Time</h3>
+            <p class="why-card__text">We confirm your appointment, send a reminder, and let you know when we're on the way. No guessing.</p>
+          </div>
         </div>
         <div class="why-card">
           <div class="why-card__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
           </div>
-          <h3 class="why-card__title">Detail-Obsessed</h3>
-          <p class="why-card__text">We treat every vehicle like it's our own. From the crevices to the cup holders, nothing gets overlooked.</p>
+          <div>
+            <h3 class="why-card__title">Thorough Work</h3>
+            <p class="why-card__text">We don't cut corners. Every cup holder, every crevice, every panel gets attention.</p>
+          </div>
         </div>
         <div class="why-card">
           <div class="why-card__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </div>
-          <h3 class="why-card__title">Respectful Service</h3>
-          <p class="why-card__text">We respect your property, your time, and your space. Clean workspace, polite communication, and a smile.</p>
+          <div>
+            <h3 class="why-card__title">Respectful &amp; Friendly</h3>
+            <p class="why-card__text">We treat your property with care, communicate clearly, and clean up after ourselves.</p>
+          </div>
         </div>
         <div class="why-card">
           <div class="why-card__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <h3 class="why-card__title">5-Star Results</h3>
-          <p class="why-card__text">Our customers keep coming back — and they tell their neighbors. Check our reviews and see for yourself.</p>
+          <div>
+            <h3 class="why-card__title">5-Star Reviews</h3>
+            <p class="why-card__text">Don't just take our word for it. Our customers leave great reviews because we earn them.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="about section" id="about">
+  <!-- ABOUT -->
+  <section class="about section section--light" id="about">
     <div class="container about__inner">
       <div class="about__image">
-        <!-- Replace with actual photo -->
         <div class="about__image-placeholder">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
           <span>Your Photo Here</span>
         </div>
       </div>
-      <div class="about__content reveal">
-        <div class="section__eyebrow">Our Story</div>
+      <div class="about__content">
         <h2 class="section__title">About Lutz Auto Detailing</h2>
-        <p>We're a locally owned and operated mobile detailing service based right here in Lutz, Florida. What started as a passion for cars grew into a mission: to give every vehicle the care it deserves — without the hassle of going to a shop.</p>
-        <p>We use professional-grade products, proven techniques, and a meticulous process for every job. Whether it's a daily commuter, a family SUV, or a weekend ride, we give the same level of attention to every vehicle.</p>
-        <h3>Our Process</h3>
-        <ol class="about__process">
-          <li><strong>Book Online</strong> — Pick your package, choose your time, and we handle the rest.</li>
-          <li><strong>We Show Up</strong> — We arrive at your location with everything we need.</li>
-          <li><strong>We Detail</strong> — Thorough, careful work from start to finish.</li>
-          <li><strong>You Enjoy</strong> — Walk out to a vehicle that looks and feels brand new.</li>
-        </ol>
-        <a href="booking.html" class="btn btn--primary">Book Your Appointment</a>
+        <p>We're a locally owned mobile detailing service based right here in Lutz, Florida. What started as a passion for cars grew into a mission: to give every vehicle the care it deserves, without the hassle of driving to a shop.</p>
+        <p>We use professional-grade products and proven techniques on every job. Whether it's a daily commuter, a family SUV, or a weekend ride, we give the same level of attention to every vehicle.</p>
+        <div class="about__highlight">
+          <strong>Serving:</strong> Lutz, Land O' Lakes, Wesley Chapel, New Tampa, Odessa, and Carrollwood
+        </div>
+        <a href="booking.html" class="btn btn--primary btn--md">Book Your Appointment</a>
+        <span class="about__or">or call <a href="tel:8135550123"><strong>(813) 555-0123</strong></a></span>
       </div>
     </div>
   </section>
 
-  <!-- ============ GALLERY ============ -->
-  <section class="gallery section section--light" id="gallery">
-    <div class="container">
-      <div class="section__header reveal">
-        <div class="section__eyebrow">Results</div>
-        <h2 class="section__title">Before &amp; After</h2>
-        <p class="section__subtitle">See the difference a professional detail makes.</p>
-      </div>
-      <div class="gallery__grid">
-        <!-- Gallery placeholders — replace with real before/after images -->
-        <div class="gallery__item">
-          <div class="gallery__placeholder">
-            <span>Before / After</span>
-            <small>Interior Detail</small>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <div class="gallery__placeholder">
-            <span>Before / After</span>
-            <small>Full Exterior</small>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <div class="gallery__placeholder">
-            <span>Before / After</span>
-            <small>Pet Hair Removal</small>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <div class="gallery__placeholder">
-            <span>Before / After</span>
-            <small>Headlight Restore</small>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <div class="gallery__placeholder">
-            <span>Before / After</span>
-            <small>Stain Extraction</small>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <div class="gallery__placeholder">
-            <span>Before / After</span>
-            <small>Engine Bay</small>
-          </div>
-        </div>
-      </div>
-      <p class="gallery__tip"><strong>Tip:</strong> Take before/after photos of every job with your phone. Use consistent angles and lighting. Ask customers for permission to share — most are happy to let you showcase great results.</p>
-    </div>
-  </section>
-
-  <!-- ============ REVIEWS ============ -->
+  <!-- REVIEWS -->
   <section class="reviews section" id="reviews">
     <div class="container">
-      <div class="section__header reveal">
-        <div class="section__eyebrow">Testimonials</div>
+      <div class="section__header">
         <h2 class="section__title">What Our Customers Say</h2>
-        <p class="section__subtitle">Real reviews from real customers in the Lutz area.</p>
+        <p class="section__subtitle">Real reviews from real people in the Lutz area.</p>
       </div>
       <div class="reviews__grid">
         <div class="review-card">
           <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-card__text">"Incredible work. My car looks better than the day I bought it. They showed up on time, were super professional, and the interior smells amazing."</p>
-          <p class="review-card__author">— Sarah M., Lutz</p>
+          <p class="review-card__text">"My car looks better than the day I bought it. They showed up on time, were very professional, and the interior smells amazing. Highly recommend."</p>
+          <p class="review-card__author">Sarah M. <span class="review-card__location">Lutz, FL</span></p>
         </div>
         <div class="review-card">
           <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-card__text">"I have two dogs and a toddler. My SUV was a disaster. They got out every hair, every stain, everything. Seriously blown away."</p>
-          <p class="review-card__author">— James R., Land O' Lakes</p>
+          <p class="review-card__text">"I have two dogs and a toddler. My SUV was a disaster. They got out every hair, every stain, everything. Seriously blown away by the results."</p>
+          <p class="review-card__author">James R. <span class="review-card__location">Land O' Lakes, FL</span></p>
         </div>
         <div class="review-card">
           <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="review-card__text">"The convenience of having them come to my office was a game-changer. Dropped off my keys at 9am, car was spotless by lunch. Will be using them monthly."</p>
-          <p class="review-card__author">— David K., Wesley Chapel</p>
+          <p class="review-card__text">"Having them come to my office was so convenient. Dropped off my keys at 9am, car was spotless by lunch. I'll be using them every month from now on."</p>
+          <p class="review-card__author">David K. <span class="review-card__location">Wesley Chapel, FL</span></p>
         </div>
       </div>
-      <!-- Google Reviews Embed placeholder -->
       <div class="reviews__embed">
-        <p>
-          <strong>See more reviews on Google</strong><br>
-          <a href="#" class="btn btn--outline" target="_blank" rel="noopener">Read Our Google Reviews</a>
-        </p>
-        <!-- To embed Google reviews: Use a widget like Elfsight, Grade.us, or embed your Google Business Profile reviews widget here -->
+        <a href="#" class="btn btn--outline btn--md" target="_blank" rel="noopener">See All Reviews on Google</a>
       </div>
     </div>
   </section>
 
-  <!-- ============ FAQ ============ -->
+  <!-- FAQ -->
   <section class="faq section section--light" id="faq">
     <div class="container">
-      <div class="section__header reveal">
-        <div class="section__eyebrow">FAQ</div>
-        <h2 class="section__title">Frequently Asked Questions</h2>
+      <div class="section__header">
+        <h2 class="section__title">Common Questions</h2>
       </div>
       <div class="faq__list">
         <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            What areas do you serve?
-            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>We're based in Lutz, FL and serve the surrounding areas including Land O' Lakes, Wesley Chapel, New Tampa, Odessa, and Carrollwood. If you're within about 20 miles of Lutz, we can likely come to you.</p>
-          </div>
+          <button class="faq__question" aria-expanded="false">What areas do you serve?<svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq__answer"><p>We're based in Lutz, FL and serve Land O' Lakes, Wesley Chapel, New Tampa, Odessa, and Carrollwood. If you're within about 20 miles, we can likely come to you.</p></div>
         </div>
         <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            Do I need to provide water or electricity?
-            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>Access to a water spigot is helpful but not always required. We carry our own water supply and equipment for most services. We'll let you know during booking if we need anything specific.</p>
-          </div>
+          <button class="faq__question" aria-expanded="false">Do I need to provide water or electricity?<svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq__answer"><p>Access to a water spigot is helpful but not always required. We carry our own water supply and equipment. We'll let you know during booking if we need anything.</p></div>
         </div>
         <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            How long does a detail take?
-            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>A Basic Exterior takes about 1 hour. Interior Detail runs 1.5–2 hours. A Full Detail takes 3–4 hours depending on vehicle size and condition. We never rush — quality comes first.</p>
-          </div>
+          <button class="faq__question" aria-expanded="false">How long does a detail take?<svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq__answer"><p>A Basic Exterior takes about 1 hour. Interior Detail runs 1.5 to 2 hours. A Full Detail takes 3 to 4 hours depending on vehicle size and condition.</p></div>
         </div>
         <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            What products do you use?
-            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>We use professional-grade, vehicle-safe products from trusted brands. All our cleaners are pH-balanced and safe for all paint types, leather, and interior surfaces.</p>
-          </div>
+          <button class="faq__question" aria-expanded="false">What if it rains on my appointment day?<svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq__answer"><p>If severe weather is forecast, we'll contact you to reschedule at no extra cost. Light rain usually doesn't affect interior work.</p></div>
         </div>
         <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            Do you require a deposit?
-            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>We collect a small deposit at the time of booking to secure your appointment. The remaining balance is due upon completion. This helps us manage our schedule and ensures we can dedicate the time your vehicle deserves.</p>
-          </div>
+          <button class="faq__question" aria-expanded="false">Do you require a deposit?<svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq__answer"><p>We collect a small deposit when you book to secure your time slot. The remaining balance is due when the job is complete.</p></div>
         </div>
         <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            What if it rains on my appointment day?
-            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>If severe weather is in the forecast, we'll contact you to reschedule at no extra cost. Light rain doesn't typically affect interior work, so we'll communicate with you on a case-by-case basis.</p>
-          </div>
-        </div>
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            Can I stay in my home/office while you work?
-            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>Absolutely. That's the beauty of mobile detailing — go about your day while we handle everything. We'll text you when we're done.</p>
-          </div>
-        </div>
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            What forms of payment do you accept?
-            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>We accept all major credit/debit cards, Venmo, Zelle, Cash App, and cash. Payment is collected upon completion of service.</p>
-          </div>
+          <button class="faq__question" aria-expanded="false">What forms of payment do you accept?<svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="faq__answer"><p>We accept all major credit and debit cards, Venmo, Zelle, Cash App, and cash.</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ FINAL CTA ============ -->
+  <!-- CTA -->
   <section class="cta-section">
-    <div class="cta-section__bg"></div>
     <div class="container cta-section__inner">
-      <h2 class="cta-section__title">Ready for a Spotless Ride?</h2>
-      <p class="cta-section__text">Book your mobile detail today and see the difference professional care makes. We serve Lutz, Land O' Lakes, Wesley Chapel, and surrounding areas.</p>
+      <h2 class="cta-section__title">Ready to Get Started?</h2>
+      <p class="cta-section__text">Book online in 2 minutes or give us a call. We'll take care of the rest.</p>
       <div class="cta-section__buttons">
-        <a href="booking.html" class="btn btn--primary btn--lg">Book Now</a>
-        <a href="quote.html" class="btn btn--outline-light btn--lg">Get a Free Quote</a>
+        <a href="booking.html" class="btn btn--primary btn--lg">Book an Appointment</a>
+        <a href="tel:8135550123" class="btn btn--outline-light btn--lg">Call (813) 555-0123</a>
       </div>
-      <p class="cta-section__phone">Or call us: <a href="tel:8135550123">(813) 555-0123</a></p>
     </div>
   </section>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__col">
-        <span class="logo-text logo-text--footer">LUTZ<span class="logo-accent">AUTO</span></span>
+        <span class="logo-text logo-text--footer">LUTZ <span class="logo-accent">AUTO DETAILING</span></span>
         <p class="footer__tagline">Professional mobile car detailing in Lutz, FL and surrounding areas.</p>
+        <p class="footer__phone"><a href="tel:8135550123">(813) 555-0123</a></p>
       </div>
       <div class="footer__col">
         <h4 class="footer__heading">Quick Links</h4>
         <ul class="footer__links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="booking.html">Book Now</a></li>
-          <li><a href="quote.html">Get a Quote</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#services">Services &amp; Pricing</a></li>
+          <li><a href="booking.html">Book an Appointment</a></li>
+          <li><a href="quote.html">Get a Free Quote</a></li>
+          <li><a href="#reviews">Customer Reviews</a></li>
+          <li><a href="#faq">Common Questions</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4 class="footer__heading">Service Areas</h4>
+        <h4 class="footer__heading">Areas We Serve</h4>
         <ul class="footer__links">
           <li>Lutz, FL</li>
           <li>Land O' Lakes</li>
@@ -536,21 +390,18 @@
         </ul>
       </div>
       <div class="footer__col">
-        <h4 class="footer__heading">Contact</h4>
+        <h4 class="footer__heading">Hours</h4>
         <ul class="footer__links">
-          <li><a href="tel:8135550123">(813) 555-0123</a></li>
-          <li><a href="mailto:info@lutzautodetailing.com">info@lutzautodetailing.com</a></li>
-          <li>Lutz, Florida 33549</li>
+          <li>Mon &ndash; Fri: 7am &ndash; 6pm</li>
+          <li>Saturday: 8am &ndash; 4pm</li>
+          <li>Sunday: Closed</li>
         </ul>
         <div class="footer__social">
           <a href="#" aria-label="Facebook" class="footer__social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
           <a href="#" aria-label="Instagram" class="footer__social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="#" aria-label="Google Business" class="footer__social-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zm-.001 4.9a7.1 7.1 0 0 1 4.58 1.688l-1.96 1.96A4.1 4.1 0 0 0 12 7.5a4.5 4.5 0 1 0 3.14 7.74l2.04 1.18A7.1 7.1 0 1 1 11.999 4.9z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
         </div>
       </div>
@@ -565,7 +416,10 @@
   <!-- Mobile Sticky CTA -->
   <div class="mobile-cta">
     <div class="mobile-cta__inner">
-      <a href="tel:8135550123" class="btn btn--outline-light btn--md">Call Now</a>
+      <a href="tel:8135550123" class="btn btn--outline-light btn--md">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Us
+      </a>
       <a href="booking.html" class="btn btn--primary btn--md">Book Now</a>
     </div>
   </div>
