@@ -1,0 +1,11 @@
+{
+  "name": "lutzautodetailing",
+  "version": "1.0.0",
+  "description": "Lutz Auto Detailing website",
+  "scripts": {
+    "start": "npx serve -s . -l 8080"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
