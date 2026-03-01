@@ -857,20 +857,32 @@ ul, ol { list-style: none; }
 .page-header {
   position: relative;
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
-  padding: 120px 0 56px;
+  padding: 130px 0 60px;
   text-align: center;
   color: var(--white);
 }
+.page-header--image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page-header__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15,40,64,0.8) 0%, rgba(15,40,64,0.7) 100%);
+}
 .page-header__title {
   position: relative;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
 .page-header__subtitle {
   position: relative;
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.75);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* ---------- Booking ---------- */
@@ -975,7 +987,120 @@ ul, ol { list-style: none; }
 .contact-info__label { font-weight: 700; margin-bottom: 2px; font-size: 0.95rem; color: var(--navy); }
 .contact-info__value { font-size: 0.9rem; color: var(--text-light); }
 
-.quote-form { max-width: 580px; margin: 0 auto; padding: 40px 0; }
+/* ---------- Quote Page Layout ---------- */
+.quote-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
+}
+.quote-form { padding: 0; }
+.quote-form__submit {
+  text-align: center;
+  margin-top: 8px;
+}
+.quote-form__submit .form-hint { margin-top: 12px; }
+
+.quote-sidebar {}
+.quote-sidebar__card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.quote-sidebar__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.quote-sidebar__body { padding: 20px; }
+.quote-sidebar__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.quote-sidebar__text {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.quote-sidebar__list {
+  list-style: none;
+  padding: 0;
+}
+.quote-sidebar__list li {
+  padding: 5px 0 5px 22px;
+  position: relative;
+  font-size: 0.88rem;
+  color: var(--text-light);
+}
+.quote-sidebar__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 14px;
+  height: 14px;
+  background: var(--green);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px;
+}
+
+/* ---------- Booking Form Submit ---------- */
+.booking-form__submit {
+  text-align: center;
+  padding-top: 8px;
+}
+.booking-form__submit .form-hint { margin-top: 12px; }
+.booking-form__optional {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* ---------- Contact Social ---------- */
+.contact-social { margin-top: 20px; }
+.contact-social__label {
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 10px;
+  color: var(--navy);
+}
+.contact-social__links { display: flex; gap: 8px; }
+.contact-social__link {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  background: var(--blue-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-accent);
+  transition: all var(--transition);
+}
+.contact-social__link:hover {
+  background: var(--blue-accent);
+  color: var(--white);
+}
+
+.contact-info__hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.contact-form-wrap__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--navy);
+}
 
 /* ---------- Mobile Nav ---------- */
 .mobile-nav {
@@ -1039,6 +1164,8 @@ ul, ol { list-style: none; }
   .footer__inner { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .quote-layout { grid-template-columns: 1fr; }
+  .quote-sidebar { order: -1; }
 }
 
 /* Mobile */
@@ -1088,8 +1215,9 @@ ul, ol { list-style: none; }
   .footer__inner { grid-template-columns: 1fr; gap: 28px; }
   .cta-section__title { font-size: 1.7rem; }
   .cta-section { padding: 60px 0; }
-  .page-header { padding: 100px 0 40px; }
-  .page-header__title { font-size: 1.7rem; }
+  .page-header { padding: 110px 0 40px; }
+  .page-header__title { font-size: 1.8rem; }
+  .quote-layout { grid-template-columns: 1fr; gap: 32px; }
 
   .mobile-cta { display: block; }
   body { padding-bottom: 68px; }

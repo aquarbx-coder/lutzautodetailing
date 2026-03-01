@@ -12,11 +12,11 @@
 </head>
 <body>
 
-  <!-- ============ HEADER ============ -->
+  <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">
-        <span class="logo-text">LUTZ<span class="logo-accent">AUTO</span></span>
+        <span class="logo-text">LUTZ <span class="logo-accent">AUTO DETAILING</span></span>
       </a>
       <nav class="nav" id="nav">
         <ul class="nav__list">
@@ -30,7 +30,10 @@
         </ul>
       </nav>
       <div class="header__actions">
-        <a href="quote.html" class="btn btn--outline btn--sm">Get a Quote</a>
+        <a href="tel:8135550123" class="header__phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (813) 555-0123
+        </a>
         <a href="booking.html" class="btn btn--primary btn--sm">Book Now</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -39,127 +42,172 @@
     </div>
   </header>
 
-  <!-- ============ PAGE HEADER ============ -->
-  <section class="page-header">
+  <!-- PAGE HEADER with background image -->
+  <section class="page-header page-header--image" style="background-image: url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1600&h=500&fit=crop&auto=format');">
+    <div class="page-header__overlay"></div>
     <div class="container">
       <h1 class="page-header__title">Get a Free Quote</h1>
       <p class="page-header__subtitle">Not ready to book? No problem. Tell us about your vehicle and we'll send you a custom estimate.</p>
     </div>
   </section>
 
-  <!-- ============ QUOTE FORM ============ -->
+  <!-- QUOTE FORM -->
   <section class="section">
     <div class="container">
-      <form class="quote-form" id="quoteForm" action="#" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="qName">Your Name</label>
-            <input type="text" class="form-input" id="qName" name="name" required>
+      <div class="quote-layout">
+        <form class="quote-form" id="quoteForm" action="#" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="qName">Your Name</label>
+              <input type="text" class="form-input" id="qName" name="name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="qPhone">Phone Number</label>
+              <input type="tel" class="form-input" id="qPhone" name="phone" placeholder="(813) 555-0000" required>
+            </div>
           </div>
           <div class="form-group">
-            <label class="form-label" for="qPhone">Phone Number</label>
-            <input type="tel" class="form-input" id="qPhone" name="phone" placeholder="(813) 555-0000" required>
+            <label class="form-label" for="qEmail">Email</label>
+            <input type="email" class="form-input" id="qEmail" name="email" placeholder="you@email.com" required>
           </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="qEmail">Email</label>
-          <input type="email" class="form-input" id="qEmail" name="email" placeholder="you@email.com" required>
-        </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="qVehicle">Vehicle Make &amp; Model</label>
-            <input type="text" class="form-input" id="qVehicle" name="vehicle" placeholder="e.g. Honda CR-V 2022">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="qVehicle">Vehicle Make &amp; Model</label>
+              <input type="text" class="form-input" id="qVehicle" name="vehicle" placeholder="e.g. Honda CR-V 2022">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="qVehicleType">Vehicle Type</label>
+              <select class="form-select" id="qVehicleType" name="vehicle_type">
+                <option value="" disabled selected>Select type</option>
+                <option value="sedan">Sedan / Coupe</option>
+                <option value="suv">SUV / Crossover</option>
+                <option value="truck">Truck / Van</option>
+              </select>
+            </div>
           </div>
+
           <div class="form-group">
-            <label class="form-label" for="qVehicleType">Vehicle Type</label>
-            <select class="form-select" id="qVehicleType" name="vehicle_type">
-              <option value="" disabled selected>Select type</option>
-              <option value="sedan">Sedan / Coupe</option>
-              <option value="suv">SUV / Crossover</option>
-              <option value="truck">Truck / Van</option>
+            <label class="form-label" for="qService">Service Interested In</label>
+            <select class="form-select" id="qService" name="service">
+              <option value="" disabled selected>Select a service</option>
+              <option value="exterior">Basic Exterior — Starting at $79</option>
+              <option value="interior">Interior Detail — Starting at $129</option>
+              <option value="full">Full Detail — Starting at $199</option>
+              <option value="unsure">Not sure yet — need advice</option>
             </select>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label class="form-label" for="qService">Service Interested In</label>
-          <select class="form-select" id="qService" name="service">
-            <option value="" disabled selected>Select a service</option>
-            <option value="exterior">Basic Exterior — Starting at $79</option>
-            <option value="interior">Interior Detail — Starting at $129</option>
-            <option value="full">Full Detail — Starting at $199</option>
-            <option value="unsure">Not sure yet — need advice</option>
-          </select>
-        </div>
+          <div class="form-group">
+            <label class="form-label" for="qCondition">Vehicle Condition</label>
+            <select class="form-select" id="qCondition" name="condition">
+              <option value="" disabled selected>Select condition</option>
+              <option value="light">Light — Regular upkeep</option>
+              <option value="medium">Medium — Needs a good cleaning</option>
+              <option value="heavy">Heavy — Very dirty / pet hair / stains</option>
+            </select>
+          </div>
 
-        <div class="form-group">
-          <label class="form-label" for="qCondition">Vehicle Condition</label>
-          <select class="form-select" id="qCondition" name="condition">
-            <option value="" disabled selected>Select condition</option>
-            <option value="light">Light — Regular upkeep</option>
-            <option value="medium">Medium — Needs a good cleaning</option>
-            <option value="heavy">Heavy — Very dirty / pet hair / stains</option>
-          </select>
-        </div>
+          <div class="form-group">
+            <label class="form-label" for="qPhotos">Upload Photos (optional)</label>
+            <input type="file" class="form-input" id="qPhotos" name="photos" multiple accept="image/*">
+            <p class="form-hint">Photos help us give you a more accurate quote.</p>
+          </div>
 
-        <div class="form-group">
-          <label class="form-label" for="qPhotos">Upload Photos (optional)</label>
-          <input type="file" class="form-input" id="qPhotos" name="photos" multiple accept="image/*">
-          <p class="form-hint">Photos help us give you a more accurate quote.</p>
-        </div>
+          <div class="form-group">
+            <label class="form-label" for="qMessage">Additional Details</label>
+            <textarea class="form-textarea" id="qMessage" name="message" rows="4" placeholder="Tell us anything else — specific stains, pet hair situation, timeline preferences, etc."></textarea>
+          </div>
 
-        <div class="form-group">
-          <label class="form-label" for="qMessage">Additional Details</label>
-          <textarea class="form-textarea" id="qMessage" name="message" rows="4" placeholder="Tell us anything else — specific stains, pet hair situation, timeline preferences, etc."></textarea>
-        </div>
+          <div class="quote-form__submit">
+            <button type="submit" class="btn btn--primary btn--lg btn--full">Send Quote Request</button>
+            <p class="form-hint">We typically respond within a few hours during business hours.</p>
+          </div>
+        </form>
 
-        <div style="text-align:center;">
-          <button type="submit" class="btn btn--primary btn--lg">Send Quote Request</button>
-          <p class="form-hint" style="margin-top:12px;">We typically respond within a few hours during business hours.</p>
-        </div>
-      </form>
+        <!-- Sidebar -->
+        <aside class="quote-sidebar">
+          <div class="quote-sidebar__card">
+            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=400&h=250&fit=crop&auto=format" alt="Freshly detailed vehicle" loading="lazy" class="quote-sidebar__image">
+            <div class="quote-sidebar__body">
+              <h3 class="quote-sidebar__title">Why Get a Quote?</h3>
+              <ul class="quote-sidebar__list">
+                <li>No obligation — completely free</li>
+                <li>Custom pricing for your vehicle</li>
+                <li>We'll recommend the right package</li>
+                <li>Response within a few hours</li>
+              </ul>
+            </div>
+          </div>
 
-      <div style="text-align:center; margin-top:32px; padding-top:32px; border-top:1px solid #e8e8e8;">
-        <p style="color: var(--text-light); margin-bottom:12px;">Ready to book instead?</p>
-        <a href="booking.html" class="btn btn--outline btn--md">Book Your Appointment</a>
+          <div class="quote-sidebar__card">
+            <div class="quote-sidebar__body">
+              <h3 class="quote-sidebar__title">Prefer to Talk?</h3>
+              <p class="quote-sidebar__text">Call or text us and we'll walk you through your options.</p>
+              <a href="tel:8135550123" class="btn btn--outline btn--md btn--full">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                (813) 555-0123
+              </a>
+            </div>
+          </div>
+
+          <div class="quote-sidebar__card">
+            <div class="quote-sidebar__body">
+              <h3 class="quote-sidebar__title">Ready to Book?</h3>
+              <p class="quote-sidebar__text">If you already know what you want, skip the quote and book directly.</p>
+              <a href="booking.html" class="btn btn--primary btn--md btn--full">Book an Appointment</a>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
 
-  <!-- ============ FOOTER ============ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__col">
-        <span class="logo-text logo-text--footer">LUTZ<span class="logo-accent">AUTO</span></span>
+        <span class="logo-text logo-text--footer">LUTZ <span class="logo-accent">AUTO DETAILING</span></span>
         <p class="footer__tagline">Professional mobile car detailing in Lutz, FL and surrounding areas.</p>
+        <p class="footer__phone"><a href="tel:8135550123">(813) 555-0123</a></p>
       </div>
       <div class="footer__col">
         <h4 class="footer__heading">Quick Links</h4>
         <ul class="footer__links">
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="booking.html">Book Now</a></li>
-          <li><a href="quote.html">Get a Quote</a></li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#services">Services &amp; Pricing</a></li>
+          <li><a href="booking.html">Book an Appointment</a></li>
+          <li><a href="quote.html">Get a Free Quote</a></li>
+          <li><a href="index.html#reviews">Customer Reviews</a></li>
+          <li><a href="index.html#faq">Common Questions</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4 class="footer__heading">Service Areas</h4>
+        <h4 class="footer__heading">Areas We Serve</h4>
         <ul class="footer__links">
           <li>Lutz, FL</li>
           <li>Land O' Lakes</li>
           <li>Wesley Chapel</li>
           <li>New Tampa</li>
           <li>Odessa</li>
+          <li>Carrollwood</li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4 class="footer__heading">Contact</h4>
+        <h4 class="footer__heading">Hours</h4>
         <ul class="footer__links">
-          <li><a href="tel:8135550123">(813) 555-0123</a></li>
-          <li><a href="mailto:info@lutzautodetailing.com">info@lutzautodetailing.com</a></li>
+          <li>Mon &ndash; Fri: 7am &ndash; 6pm</li>
+          <li>Saturday: 8am &ndash; 4pm</li>
+          <li>Sunday: Closed</li>
         </ul>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook" class="footer__social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="footer__social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
       </div>
     </div>
     <div class="footer__bottom">
@@ -171,7 +219,10 @@
 
   <div class="mobile-cta">
     <div class="mobile-cta__inner">
-      <a href="tel:8135550123" class="btn btn--outline-light btn--md">Call Now</a>
+      <a href="tel:8135550123" class="btn btn--outline btn--md">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Us
+      </a>
       <a href="booking.html" class="btn btn--primary btn--md">Book Now</a>
     </div>
   </div>
